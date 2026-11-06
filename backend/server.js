@@ -6,12 +6,13 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable CORS so the React frontend (running on e.g. port 5173) can communicate with this API
+// Enable CORS so the React frontend can communicate with this API
 app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://my-portfolio-qr18.onrender.com'
+    'https://my-portfolio-qr18.onrender.com',
+    'https://preethi-portfolio-cy8u.onrender.com'
   ],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
@@ -145,4 +146,3 @@ app.get('/api/messages', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Backend server running on http://localhost:${PORT}`);
 });
-
