@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preethi Rajendran | MCA Student & Aspiring IT Professional</title>
+  <meta name="description" content="Portfolio of Preethi Rajendran - MCA Student, BCA in Data Science, Aspiring IT Professional with projects in Python, Django, IoT, and Cloud.">
+  <meta name="keywords" content="Preethi Rajendran, Portfolio, MCA, Data Science, Python, Django, IoT, IT Professional">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background decorative light glow (subtle, non-distracting) -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-badge">PR</span>
+        <span class="logo-text">Preethi<span>.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="window.print()" class="btn btn-outline btn-sm nav-resume-btn" title="Print / Save PDF of Resume">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </button>
+        <button class="hamburger-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot"></span>
+            HELLO, I'M
+          </div>
+          <h1 class="hero-title">Preethi Rajendran</h1>
+          <p class="hero-subtitle">MCA Student | Aspiring IT Professional | Technology Enthusiast</p>
+          <p class="hero-description">
+            I'm an MCA student with a background in Data Science, interested in technology, problem-solving and building practical solutions. I enjoy exploring different areas of technology and continuously developing my skills through projects and hands-on learning.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <button onclick="window.print()" class="btn btn-secondary">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Download Resume</span>
+            </button>
+          </div>
+
+          <div class="hero-social-block">
+            <span class="social-label">Connect with me:</span>
+            <div class="social-links">
+              <a href="https://github.com/Preethi-2306" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/preethi-rajendran2306" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="mailto:preethirajendran2306@gmail.com" class="social-pill" aria-label="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="visual-card-backdrop"></div>
+            <div class="visual-card">
+              <div class="photo-container">
+                <img src="profile.jpg" alt="Preethi Rajendran" class="profile-img" onerror="this.onerror=null; this.parentElement.classList.add('photo-fallback');">
+                <div class="photo-fallback-content">
+                  <div class="initials-avatar">PR</div>
+                  <span>Preethi Rajendran</span>
+                </div>
+              </div>
+
+              <!-- Floating highlight cards -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="badge-info">
+                  <span class="badge-title">MCA Scholar</span>
+                  <span class="badge-sub">BCA in Data Science</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="badge-info">
+                  <span class="badge-title">Python & Web</span>
+                  <span class="badge-sub">IoT & Cloud Basics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Overview</span>
+          <h2 class="section-title">A Little About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p class="lead-text">
+              Hello! I am Preethi Rajendran, an enthusiastic technology learner pursuing my <strong>Master of Computer Applications (MCA)</strong>.
+            </p>
+            <p class="body-text">
+              Having completed my <strong>BCA in Data Science</strong>, I have developed a strong foundation in core computer science, programming, analytical thinking, and database concepts. My core academic and technical interests lie in software development, data science, and artificial intelligence.
+            </p>
+            <p class="body-text">
+              I enjoy understanding how modern technology works from the inside out and applying academic concepts through practical hands-on projects—from writing backend logic in Python and Django to building hardware-software integrations with IoT and Arduino. I believe in consistent learning, curiosity, and disciplined problem solving to prepare for real-world industry challenges.
+            </p>
+
+            <div class="languages-known">
+              <span class="lang-title"><i class="fa-solid fa-globe"></i> Languages Spoken:</span>
+              <div class="lang-tags">
+                <span class="lang-tag"><span class="bullet"></span> Tamil (Native)</span>
+                <span class="lang-tag"><span class="bullet"></span> English</span>
+                <span class="lang-tag"><span class="bullet"></span> Telugu</span>
+                <span class="lang-tag"><span class="bullet"></span> Hindi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cards-grid">
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <h3>Focus Areas</h3>
+              <p>Software development, web applications, data science workflows, and AI fundamentals.</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>Academic Background</h3>
+              <p>BCA in Data Science graduate, currently pursuing Master of Computer Applications (MCA).</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-gears"></i></div>
+              <h3>Hands-on Mindset</h3>
+              <p>Passionate about building functional solutions through projects, testing, and continuous practice.</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-compass"></i></div>
+              <h3>Career Aspiration</h3>
+              <p>Seeking an entry-level IT role to apply technical skills, collaborate, and grow professionally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Technical Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Systematically organised technical competencies acquired through academic coursework, internships, and self-directed practice.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-terminal"></i></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-code"></i>
+                  <span class="skill-name">C</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-python"></i>
+                  <span class="skill-name">Python</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-java"></i>
+                  <span class="skill-name">Java (Basics)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h3>Web Technologies</h3>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-html5"></i>
+                  <span class="skill-name">HTML</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <span class="skill-name">CSS</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-bootstrap"></i>
+                  <span class="skill-name">Bootstrap</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-network-wired"></i>
+                  <span class="skill-name">Django</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-database"></i></div>
+              <h3>Database</h3>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-server"></i>
+                  <span class="skill-name">SQL</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-table"></i>
+                  <span class="skill-name">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-cloud"></i></div>
+              <h3>Cloud Services</h3>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-aws"></i>
+                  <span class="skill-name">AWS EC2</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-aws"></i>
+                  <span class="skill-name">AWS S3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category-card full-width-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-wrench"></i></div>
+              <h3>Development & Analytical Tools</h3>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-brands fa-github"></i>
+                  <span class="skill-name">GitHub</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-code"></i>
+                  <span class="skill-name">VS Code</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-file-excel"></i>
+                  <span class="skill-name">Excel</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-chart-simple"></i>
+                  <span class="skill-name">Tableau</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-inner">
+                  <i class="fa-solid fa-microchip"></i>
+                  <span class="skill-name">Arduino</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Career Milestones</span>
+          <h2 class="section-title">Internship Experience</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="experience-container">
+          <div class="experience-card">
+            <div class="experience-card-header">
+              <div class="exp-role-info">
+                <div class="exp-badge-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <h3 class="exp-role-title">Data Science, Machine Learning & AI Intern</h3>
+                  <div class="exp-meta">
+                    <span class="meta-tag"><i class="fa-regular fa-clock"></i> Short-Term Internship</span>
+                    <span class="meta-tag"><i class="fa-solid fa-laptop"></i> Hands-on Practice</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience-card-body">
+              <p class="exp-summary-text">
+                Participated in a hands-on technical internship program focusing on foundational data science concepts, python workflows, and intelligent system introductory pipelines.
+              </p>
+              <h4 class="exp-tasks-title">Key Responsibilities & Deliverables:</h4>
+              <ul class="exp-task-list">
+                <li>
+                  <div class="check-bullet"><i class="fa-solid fa-check"></i></div>
+                  <span><strong>Data Preprocessing & Cleaning:</strong> Performed data preprocessing and data cleaning using Python, handling missing values and preparing structured datasets for analysis.</span>
+                </li>
+                <li>
+                  <div class="check-bullet"><i class="fa-solid fa-check"></i></div>
+                  <span><strong>ML & AI Concepts:</strong> Worked with basic Machine Learning and AI concepts and introductory workflows to understand algorithmic decision processes.</span>
+                </li>
+                <li>
+                  <div class="check-bullet"><i class="fa-solid fa-check"></i></div>
+                  <span><strong>Data Visualization & Analysis:</strong> Performed basic data visualisation and dataset analysis to understand key distributions and extract meaningful insights.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-card-footer">
+              <div class="tag-group">
+                <span class="pill-tag">Python</span>
+                <span class="pill-tag">Data Preprocessing</span>
+                <span class="pill-tag">Machine Learning Workflows</span>
+                <span class="pill-tag">Data Visualisation</span>
+                <span class="pill-tag">Dataset Analysis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Projects</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Practical applications built during academic curriculum and focused programming initiatives.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 01: Pet Adoption Portal -->
+          <article class="project-card">
+            <div class="project-media">
+              <div class="project-preview-mockup pet-preview">
+                <div class="mockup-top-bar">
+                  <span class="window-dot red"></span>
+                  <span class="window-dot yellow"></span>
+                  <span class="window-dot green"></span>
+                  <span class="mockup-address">localhost:8000/pet-adoption</span>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-header-area">
+                    <i class="fa-solid fa-paw mock-icon"></i>
+                    <div>
+                      <div class="mock-line title"></div>
+                      <div class="mock-line sub"></div>
+                    </div>
+                  </div>
+                  <div class="mockup-cards-row">
+                    <div class="mock-card">
+                      <div class="mock-thumb"><i class="fa-solid fa-dog"></i></div>
+                      <div class="mock-caption"></div>
+                    </div>
+                    <div class="mock-card">
+                      <div class="mock-thumb"><i class="fa-solid fa-cat"></i></div>
+                      <div class="mock-caption"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="project-badge">PROJECT 01</span>
+            </div>
+
+            <div class="project-body">
+              <span class="project-category">Short-Term Python Project</span>
+              <h3 class="project-title">Pet Adoption Portal</h3>
+              <p class="project-description">
+                Developed a full-featured pet adoption web portal with pet listings, picture uploads, user login, and adoption request features using Django and MySQL.
+              </p>
+
+              <div class="project-feature-box">
+                <h4>Key Features</h4>
+                <ul class="feature-checklist">
+                  <li><i class="fa-solid fa-circle-check"></i> Pet listings and picture uploads</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Secure user login functionality</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Streamlined adoption request functionality</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Interactive portal for user and pet interaction</li>
+                </ul>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/Preethi-2306" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>View Repository</span>
+                </a>
+                <button class="btn btn-outline btn-sm" onclick="openProjectModal('pet')">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span>Architecture Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: Automatic Passenger Bridge using IoT -->
+          <article class="project-card">
+            <div class="project-media">
+              <div class="project-preview-mockup iot-preview">
+                <div class="mockup-top-bar">
+                  <span class="window-dot red"></span>
+                  <span class="window-dot yellow"></span>
+                  <span class="window-dot green"></span>
+                  <span class="mockup-address">system://arduino-bridge-control</span>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-header-area">
+                    <i class="fa-solid fa-train-subway mock-icon"></i>
+                    <div>
+                      <div class="mock-line title"></div>
+                      <div class="mock-line sub"></div>
+                    </div>
+                  </div>
+                  <div class="mockup-iot-schematic">
+                    <div class="iot-node"><i class="fa-solid fa-tower-broadcast"></i><span>Sensors</span></div>
+                    <div class="iot-arrow"><i class="fa-solid fa-right-long"></i></div>
+                    <div class="iot-node active"><i class="fa-solid fa-microchip"></i><span>Arduino</span></div>
+                    <div class="iot-arrow"><i class="fa-solid fa-right-long"></i></div>
+                    <div class="iot-node"><i class="fa-solid fa-desktop"></i><span>Display</span></div>
+                  </div>
+                </div>
+              </div>
+              <span class="project-badge">PROJECT 02</span>
+            </div>
+
+            <div class="project-body">
+              <span class="project-category">Academic Project</span>
+              <h3 class="project-title">Automatic Passenger Bridge Using IoT</h3>
+              <p class="project-description">
+                Built an IoT-based railway bridge safety system using Arduino and sensors, involving embedded programming, connectivity, rigorous testing and troubleshooting.
+              </p>
+
+              <div class="project-feature-box">
+                <h4>Key Features</h4>
+                <ul class="feature-checklist">
+                  <li><i class="fa-solid fa-circle-check"></i> Integrated sensor detection module</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Real-time display system for bridge monitoring</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Automated bridge operation mechanism</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Complete hardware and software integration</li>
+                </ul>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">Sensors</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Embedded Programming</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('iot')">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span>System Architecture</span>
+                </button>
+                <a href="https://github.com/Preethi-2306" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub Profile</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Education Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- 1. MCA -->
+          <div class="timeline-item active-current">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="degree-status-badge">Currently Pursuing</span>
+                  <h3 class="degree-title">Master of Computer Applications (MCA)</h3>
+                  <h4 class="institution-name">Aditya Degree & P.G. College, Visakhapatnam</h4>
+                </div>
+                <div class="timeline-period">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>Pursuing</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Advancing core computer science domains, modern software engineering concepts, database management, and enterprise application architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. BCA -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="degree-status-badge badge-completed">Completed</span>
+                  <h3 class="degree-title">Bachelor of Computer Applications (BCA) – Data Science</h3>
+                  <h4 class="institution-name">Gayatri Vidya Parishad College for Degree & PG Courses (A)</h4>
+                </div>
+                <div class="timeline-period">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2022 – 2025</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Comprehensive curriculum covering Data Science principles, Python programming, database systems, statistical fundamentals, and practical software coursework.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Intermediate -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="degree-status-badge badge-completed">Completed</span>
+                  <h3 class="degree-title">Intermediate (MPC)</h3>
+                  <h4 class="institution-name">Sri Chaitanya Junior College, Visakhapatnam</h4>
+                </div>
+                <div class="timeline-period">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2020 – 2022</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Core scientific education with focus on Mathematics, Physics, and Chemistry, providing strong analytical and logical foundation.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. 10th ICSE -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-icon"><i class="fa-solid fa-school"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="degree-status-badge badge-completed">Completed</span>
+                  <h3 class="degree-title">10th Standard (ICSE)</h3>
+                  <h4 class="institution-name">Fort Catholic Girls School</h4>
+                </div>
+                <div class="timeline-period">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2020</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Completed secondary education with ICSE curriculum, establishing strong fundamentals across academic disciplines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Certifications Section -->
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Learning & Verification</span>
+          <h2 class="section-title">Certifications</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Industry and professional training certifications completed to expand practical competence.
+          </p>
+        </div>
+
+        <div class="certifications-grid">
+          <div class="cert-card">
+            <div class="cert-icon-box ms">
+              <i class="fa-brands fa-microsoft"></i>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Microsoft</span>
+              <h3 class="cert-name">Microsoft Python Development Professional Certificate</h3>
+              <p class="cert-scope">Proficiency in Python syntax, programming fundamentals, data structures, and script development.</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-box ibm">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">IBM</span>
+              <h3 class="cert-name">IBM AI Certification</h3>
+              <p class="cert-scope">Understanding of Artificial Intelligence paradigms, machine learning concepts, and intelligent system workflows.</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-box aws">
+              <i class="fa-brands fa-aws"></i>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">AWS</span>
+              <h3 class="cert-name">AWS Cloud Computing Training</h3>
+              <p class="cert-scope">Foundational training in AWS core cloud infrastructure services including EC2 compute instances and S3 object storage.</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-box nptel">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">NPTEL</span>
+              <h3 class="cert-name">NPTEL IoT Certification</h3>
+              <p class="cert-scope">Internet of Things architecture, sensor integration, embedded protocols, and microcontroller application workflows.</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-box gfg">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">GeeksforGeeks</span>
+              <h3 class="cert-name">GeeksforGeeks C Programming Certification</h3>
+              <p class="cert-scope">Core procedural programming, memory handling, data structures, and algorithmic logic in C.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Open to campus placement opportunities, internships, and entry-level IT roles.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <div class="contact-intro">
+              <h3>Let's Connect</h3>
+              <p>
+                Feel free to reach out directly via email or phone. I'm actively seeking entry-level IT opportunities to apply my skills and grow professionally.
+              </p>
+            </div>
+
+            <div class="contact-details-list">
+              <a href="mailto:preethirajendran2306@gmail.com" class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">Email Address</span>
+                  <span class="contact-value">preethirajendran2306@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+918247227129" class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">Phone / Mobile</span>
+                  <span class="contact-value">+91 8247227129</span>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Visakhapatnam, Andhra Pradesh, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-footer">
+              <span class="footer-social-label">Find me on professional platforms:</span>
+              <div class="social-links">
+                <a href="https://linkedin.com/in/preethi-rajendran2306" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Preethi-2306" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:preethirajendran2306@gmail.com" class="social-circle" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Opportunity / Project Inquiry" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+              <div id="formStatus" class="form-status-msg"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="copyright">&copy; 2026 Preethi Rajendran. All rights reserved.</p>
+        <p class="footer-note">Designed with a modern, minimal aesthetic.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Project Details -->
+  <div class="modal-backdrop" id="projectModal" onclick="closeProjectModal(event)">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge" id="modalCategory">Category</span>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
+
