@@ -36,8 +36,7 @@ const Contact = () => {
     setFieldErrors({});
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
+      const response = await fetch('https://preethi-portfolio-cy8u.onrender.com/api/contact', {
         headers: {
           'Content-Type': 'application/json'
         },
@@ -65,7 +64,7 @@ const Contact = () => {
       console.error('Contact form submission error:', err);
       setStatus({
         type: 'error',
-        message: 'Could not connect to the backend server (http://localhost:5000). Please ensure the backend is running.'
+        message: 'Could not connect to the backend server. Please try again later.'
       });
     } finally {
       setLoading(false);

@@ -8,7 +8,11 @@ const PORT = process.env.PORT || 5000;
 
 // Enable CORS so the React frontend (running on e.g. port 5173) can communicate with this API
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: [
+    'http://localhost:5173',
+    'http://127.0.0.1:5173',
+    'https://my-portfolio-qr18.onrender.com'
+  ],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
