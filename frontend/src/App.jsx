@@ -1,122 +1,85 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import ProjectModal from './components/ProjectModal';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [modalKey, setModalKey] = useState(null);
+
+  const projectDetails = {
+    pet: {
+      category: 'Short-Term Python Project',
+      title: 'Pet Adoption Portal',
+      overview: 'A web-based portal developed to connect prospective pet adopters with rescue listings. Built using Django\'s Model-View-Template (MVT) architecture with MySQL as the relational database backend.',
+      points: [
+        'Configured user authentication and session management for account sign-in and registration.',
+        'Engineered dynamic forms for listing pets, including secure image uploads and descriptive metadata.',
+        'Implemented user-side adoption request submission workflows connecting users with pet records.',
+        'Styled clean, responsive UI layouts with Bootstrap and custom CSS for mobile and desktop screens.'
+      ],
+      tech: 'Backend: Python, Django | Database: MySQL | Frontend: HTML, CSS, Bootstrap'
+    },
+    iot: {
+      category: 'Academic Project',
+      title: 'Automatic Passenger Bridge Using IoT',
+      overview: 'An IoT-enabled automated railway passenger footbridge safety system built using Arduino microcontroller and integrated sensors to provide reliable, synchronized bridge movement and status alerts.',
+      points: [
+        'Sensor integration to monitor passenger foot traffic and approaching train proximity.',
+        'Automated motorized bridge operation logic programmed in C / embedded Arduino code.',
+        'Integrated display panel alerting pedestrians about bridge movement status and train passage.',
+        'Rigorous circuit troubleshooting, pin assignments, signal verification, and embedded testing.'
+      ],
+      tech: 'Hardware: Arduino Board, Detection Sensors, Servo/Motor Actuators, Display Module | Software: Embedded C / Arduino IDE'
+    }
+  };
+
+  const handleOpenModal = (key) => {
+    setModalKey(key);
+  };
+
+  const handleCloseModal = () => {
+    setModalKey(null);
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="portfolio-app">
+      {/* Subtle ambient glow elements */}
+      <div className="ambient-glow ambient-glow-1"></div>
+      <div className="ambient-glow ambient-glow-2"></div>
 
-      <div className="ticks"></div>
+      {/* Navigation */}
+      <Navbar />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* Main Content */}
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects onOpenModal={handleOpenModal} />
+        <Education />
+        <Certifications />
+        <Contact />
+      </main>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Footer */}
+      <Footer />
+
+      {/* Interactive Project Architecture Modal */}
+      <ProjectModal
+        modalData={modalKey ? projectDetails[modalKey] : null}
+        onClose={handleCloseModal}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;

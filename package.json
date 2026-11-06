@@ -1,0 +1,21 @@
+{
+  "name": "preethi-portfolio-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack personal portfolio for Preethi Rajendran with React Vite frontend and Node Express backend",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "express",
+    "portfolio",
+    "full-stack"
+  ],
+  "author": "Preethi Rajendran",
+  "license": "ISC"
+}
+
