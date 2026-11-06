@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,6 +13,43 @@ import ProjectModal from './components/ProjectModal';
 
 function App() {
   const [modalKey, setModalKey] = useState(null);
+
+  // Initialize theme from localStorage or system preference
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('preethi-portfolio-theme');
+    if (saved) return saved;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('preethi-portfolio-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
+  // Scroll reveal observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    const elements = document.querySelectorAll('.reveal-fade');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const projectDetails = {
     pet: {
@@ -56,18 +93,34 @@ function App() {
       <div className="ambient-glow ambient-glow-2"></div>
 
       {/* Navigation */}
-      <Navbar />
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
 
-      {/* Main Content */}
+      {/* Main Content with Reveal Effects */}
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects onOpenModal={handleOpenModal} />
-        <Education />
-        <Certifications />
-        <Contact />
+        <div className="reveal-fade is-visible">
+          <Hero />
+        </div>
+        <div className="reveal-fade">
+          <About />
+        </div>
+        <div className="reveal-fade">
+          <Skills />
+        </div>
+        <div className="reveal-fade">
+          <Experience />
+        </div>
+        <div className="reveal-fade">
+          <Projects onOpenModal={handleOpenModal} />
+        </div>
+        <div className="reveal-fade">
+          <Education />
+        </div>
+        <div className="reveal-fade">
+          <Certifications />
+        </div>
+        <div className="reveal-fade">
+          <Contact />
+        </div>
       </main>
 
       {/* Footer */}

@@ -35,8 +35,11 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
     setFieldErrors({});
 
+    // Target deployed backend API (or relative/configurable without hardcoded localhost in prod)
+    const apiUrl = 'https://preethi-portfolio-cy8u.onrender.com/api/contact';
+
     try {
-      const response = await fetch('https://preethi-portfolio-cy8u.onrender.com/api/contact', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -243,19 +246,23 @@ const Contact = () => {
 
               {status.message && (
                 <div
-                  className={`form-status-msg ${status.type === 'success' ? 'success' : ''}`}
+                  className="form-status-msg"
                   style={{
                     display: 'block',
-                    backgroundColor: status.type === 'success' ? '#F0FDF4' : '#FEF2F2',
-                    color: status.type === 'success' ? '#166534' : '#991B1B',
-                    border: `1px solid ${status.type === 'success' ? '#BBF7D0' : '#FECACA'}`,
-                    marginTop: '1rem',
-                    padding: '0.75rem 1rem',
-                    borderRadius: '8px',
-                    fontSize: '0.88rem'
+                    backgroundColor: status.type === 'success' ? 'var(--secondary-sage-soft)' : '#FEE2E2',
+                    color: status.type === 'success' ? 'var(--primary-teal)' : '#B91C1C',
+                    border: `1px solid ${status.type === 'success' ? 'var(--secondary-sage-border)' : '#FCA5A5'}`,
+                    marginTop: '1.1rem',
+                    padding: '0.85rem 1.1rem',
+                    borderRadius: 'var(--radius-md)',
+                    fontSize: '0.9rem',
+                    fontWeight: 500
                   }}
                 >
-                  <i className={`fa-solid ${status.type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation'}`} style={{ marginRight: '6px' }}></i>
+                  <i
+                    className={`fa-solid ${status.type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation'}`}
+                    style={{ marginRight: '8px' }}
+                  ></i>
                   {status.message}
                 </div>
               )}

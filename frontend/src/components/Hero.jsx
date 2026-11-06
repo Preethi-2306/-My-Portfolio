@@ -1,6 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
+  // Roles for subtle typing effect
+  const roles = [
+    'MCA Student',
+    'Aspiring IT Professional',
+    'Technology Enthusiast',
+    'Data Science Graduate'
+  ];
+
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    let timeout;
+
+    if (!isDeleting) {
+      // Typing forward
+      if (displayText.length < currentRole.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length + 1));
+        }, 90);
+      } else {
+        // Pause at complete word
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 1800);
+      }
+    } else {
+      // Deleting back
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length - 1));
+        }, 45);
+      } else {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, roleIndex]);
+
   return (
     <section className="hero-section" id="home">
       <div className="container hero-grid">
@@ -10,7 +53,14 @@ const Hero = () => {
             HELLO, I'M
           </div>
           <h1 className="hero-title">Preethi Rajendran</h1>
-          <p className="hero-subtitle">MCA Student | Aspiring IT Professional | Technology Enthusiast</p>
+
+          <div className="hero-subtitle-box">
+            <span className="hero-subtitle-animated">
+              {displayText}
+              <span className="typing-cursor">|</span>
+            </span>
+          </div>
+
           <p className="hero-description">
             I'm an MCA student with a background in Data Science, interested in technology, problem-solving and building practical solutions. I enjoy exploring different areas of technology and continuously developing my skills through projects and hands-on learning.
           </p>
@@ -108,4 +158,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

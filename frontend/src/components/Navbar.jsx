@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ theme, onToggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -51,7 +51,7 @@ const Navbar = () => {
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
-      <div class="nav-container">
+      <div className="nav-container">
         <a href="#home" className="nav-logo">
           <span className="logo-badge">PR</span>
           <span className="logo-text">Preethi<span>.</span></span>
@@ -75,6 +75,20 @@ const Navbar = () => {
         </nav>
 
         <div className="nav-actions">
+          {/* Theme Toggle Button */}
+          <button
+            onClick={onToggleTheme}
+            className="theme-toggle-btn"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? (
+              <i className="fa-solid fa-sun" style={{ color: '#E28266' }}></i>
+            ) : (
+              <i className="fa-solid fa-moon"></i>
+            )}
+          </button>
+
           <button
             onClick={() => window.print()}
             className="btn btn-outline btn-sm nav-resume-btn"
@@ -83,8 +97,9 @@ const Navbar = () => {
             <i className="fa-solid fa-file-arrow-down"></i>
             <span>Resume</span>
           </button>
+
           <button
-            className="hamburger-btn"
+            className={`hamburger-btn ${mobileMenuOpen ? 'open' : ''}`}
             id="mobile-toggle"
             aria-label="Toggle navigation menu"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -100,4 +115,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
