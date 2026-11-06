@@ -37,6 +37,7 @@ const Contact = () => {
 
     try {
       const response = await fetch('https://preethi-portfolio-cy8u.onrender.com/api/contact', {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -267,4 +268,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
